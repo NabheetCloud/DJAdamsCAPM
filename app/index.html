@@ -1,13 +1,34 @@
 <html>
-    <head>
-        <title>North Breeze</title>
-        <script src="https://sapui5.hana.ondemand.com/test-resources/sap/ushell/bootstrap/sanbox.js"></script>
-        <script id="sap-ui-bootstrap"
-                src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-                data-sap-ui-compatVersion="edge"
-                data-sap-ui-theme="sap_belize">
-        </script>
+<head>
 
-    </head>
-    <body class="sapUiBody" id="content"></body>
+    <title>Northbreeze1</title>
+
+    <script>
+        window['sap-ushell-config'] = {
+            applications: {
+                'browse-suppliers': {
+                    title: 'Browse Suppliers9',
+                    additionalInformation: 'SAPUI5.Component=suppliers',
+                    applicationType: 'URL',
+                    url: '/browse/webapp'
+                }
+            }
+        }
+    </script>
+    <script src="/reload/reload.js"></script> 
+    <script
+        src="https://sapui5.hana.ondemand.com/test-resources/sap/ushell/bootstrap/sandbox.js"></script>
+
+    <script id="sap-ui-bootstrap"
+        src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-compatVersion="edge"
+		data-sap-ui-theme="sap_belize"></script>
+
+
+    <script>
+        sap.ui.getCore().attachInit(() => sap.ushell.Container.createRenderer('fiori2').placeAt('content'))
+    </script>
+
+</head>
+<body class="sapUiBody" id="content"></body>
 </html>

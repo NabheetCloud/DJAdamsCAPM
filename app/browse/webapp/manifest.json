@@ -1,0 +1,38 @@
+{
+    "sap.app": {
+        "id": "suppliers",
+        "title": "Browse Suppliers4",
+        "dataSources": {
+            "Breezy": {
+                "uri": "/breezy/",
+                "settings": {
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    "sap.ui5": {
+        "dependencies": { "libs": { "sap.fe": {} } },
+        "models": {
+            "": {
+                "dataSource": "Breezy",
+                "settings": { "synchronizationMode": "None" }
+            }
+        },
+        "routing": {
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "SuppliersList",
+                    "target": "SuppliersList"
+                }
+            ],
+            "targets": {
+                "SuppliersList": {
+                    "entitySet": "Suppliers",
+                    "viewName": "sap.fe.templates.ListReport"
+                }
+            }
+        }
+    }
+}

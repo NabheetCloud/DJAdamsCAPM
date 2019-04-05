@@ -12,6 +12,8 @@
     "node": ">=8"
   },
   "devDependencies": {
+    "nodemon": "^1.18.10",
+    "reload": "^2.4.0",
     "sqlite3": "^4.0.6"
   },
   "cds": {
